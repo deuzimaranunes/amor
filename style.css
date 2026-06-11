@@ -2,11 +2,11 @@
    TOKENS
 ───────────────────────────────────────────── */
 :root {
-  --bg:        #1a0000;
-  --surface:   #2d0000;
-  --rose:      #8b0000;
-  --blush:     #c97070;
-  --soft:      #e8c0c0;
+  --bg:        #3d0010;
+  --surface:   #5a0018;
+  --rose:      #c0304a;
+  --blush:     #e07090;
+  --soft:      #f5d0d8;
   --text:      #fff5f5;
   --muted:     rgba(255,245,245,.55);
   --gold:      #c9a96e;
@@ -46,18 +46,18 @@ img { display:block; max-width:100%; }
 .hrt {
   position: absolute;
   bottom: -60px;
-  font-size: 1.2rem;
+  font-size: 2rem;
   opacity: 0;
   animation: rise linear infinite;
   user-select: none;
-  color: var(--rose);
-  filter: blur(.5px);
+  color: #ff6080;
+  filter: none;
 }
 
 @keyframes rise {
   0%   { opacity: 0;    transform: translateY(0)   scale(.6) rotate(-10deg); }
-  15%  { opacity: .35; }
-  85%  { opacity: .18; }
+  15%  { opacity: .6; }
+  85%  { opacity: .3; }
   100% { opacity: 0;    transform: translateY(-110vh) scale(1.1) rotate(12deg); }
 }
 
@@ -482,7 +482,7 @@ h2 {
 .mensagem-inner h2 { color: var(--soft); }
 
 .divider-heart {
-  color: var(--rose);
+  color: #ff6080;
   font-size: 1.4rem;
   line-height: 1;
 }
