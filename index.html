@@ -2,106 +2,150 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>❤️ Feliz Dia dos Namorados ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#a50000">
+<title>Nosso App ❤️</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <div class="hearts-container"></div>
+<div id="hearts"></div>
 
-    <section class="hero">
+<header class="hero">
 
-        <div class="hero-texto">
+    <div class="hero-content">
 
-            <h1>❤️ Para o Amor da Minha Vida ❤️</h1>
+        <div class="hero-text">
 
-            <p class="subtitulo">
-                Feliz Dia dos Namorados 🌹
+            <span class="tag">
+                Nossa História
+            </span>
+
+            <h1>
+                Feliz Dia dos Namorados
+            </h1>
+
+            <p>
+                Alguns momentos merecem ser guardados para sempre.
             </p>
 
-            <p class="frase">
-                Você é meu hoje e todos os meus amanhãs.
-            </p>
+            <button>
+                Ver Nossa História
+            </button>
 
         </div>
 
-        <div class="hero-foto">
+        <div class="hero-image">
 
-            <img src="casal.jpg"
-                alt="Foto do casal"
-                class="foto-principal">
+            <img src="casal.jpg">
 
         </div>
 
-    </section>
+    </div>
 
-    <section class="carta">
-        
+</header>
+
+<section class="stats">
+
+    <div class="card-stat">
+
+        <h2 id="dias">0</h2>
+
+        <span>Dias Juntos</span>
+
+    </div>
+
+    <div class="card-stat">
+
+        <h2>∞</h2>
+
+        <span>Momentos</span>
+
+    </div>
+
+    <div class="card-stat">
+
+        <h2>❤️</h2>
+
+        <span>Nossa História</span>
+
+    </div>
+
+</section>
+
+<section class="gallery">
+
+    <h2>Nossos Momentos</h2>
+
+    <div class="gallery-grid">
+
+        <img src="foto1.jpg">
+        <img src="foto2.jpg">
+        <img src="foto3.jpg">
+        <img src="foto4.jpg">
+        <img src="foto5.jpg">
+        <img src="foto6.jpg">
+
+    </div>
+
+</section>
+
+<section class="timeline">
+
+    <h2>Nossa Linha do Tempo</h2>
+
+    <div class="timeline-item">
+
+        <img src="foto1.jpg">
+
+        <div class="timeline-text">
+
+            <h3>Primeiro Encontro</h3>
+
+            <p>O começo de tudo.</p>
+
+        </div>
+
+    </div>
+
+    <div class="timeline-item reverse">
+
+        <img src="foto2.jpg">
+
+        <div class="timeline-text">
+
+            <h3>Momentos Inesquecíveis</h3>
+
+            <p>Cada lembrança vale a pena.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="final-message">
+
+    <div class="message-card">
+
+        <h2>❤️</h2>
+
         <p>
-            Desde que você entrou na minha vida, tudo ficou mais bonito.
-            Seu sorriso ilumina meus dias, seu carinho aquece meu coração
-            e sua companhia torna qualquer momento especial.
+            Obrigado por fazer parte da minha vida.
         </p>
 
-        <p>
-            Obrigado por cada lembrança construída juntos.
-            Que nossa história continue sendo escrita com muito amor,
-            cumplicidade e felicidade.
-        </p>
+    </div>
 
-        <h3>❤️ Eu Te Amo ❤️</h3>
+</section>
 
-    </section>
-
-    <section class="contador">
-
-        <h2>⏳ Estamos juntos há</h2>
-
-        <div id="tempo"></div>
-
-    </section>
-
-    <section class="motivos">
-
-        <h2>❤️ Por Que Eu Te Amo?</h2>
-
-        <button onclick="mostrarMotivo()">
-            Clique Aqui ❤️
-        </button>
-
-        <p id="motivo"></p>
-
-    </section>
-
-    <section class="galeria">
-
-        <h2>📸 Nossas Memórias</h2>
-
-        <div class="fotos">
-
-            <img src="foto1.jpg">
-            <img src="foto2.jpg">
-            <img src="foto3.jpg">
-            <img src="foto1.jpg">
-            <img src="foto2.jpg">
-            <img src="foto3.jpg">
-
-        </div>
-
-    </section>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
