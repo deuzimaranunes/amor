@@ -66,7 +66,7 @@ function criarCoracoes() {
     const left  = Math.random() * 100;
     const delay = Math.random() * 18;
     const dur   = 14 + Math.random() * 12;
-    const size  = 0.6 + Math.random() * 1.2;
+    const size  = 1.4 + Math.random() * 2.2;
 
     hrt.style.cssText = `
       left: ${left}%;
