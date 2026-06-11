@@ -2,8 +2,8 @@
    TOKENS
 ───────────────────────────────────────────── */
 :root {
-  --bg:        #3d0010;
-  --surface:   #5a0018;
+  --bg:        #7a1530;
+  --surface:   #96203f;
   --rose:      #c0304a;
   --blush:     #e07090;
   --soft:      #f5d0d8;
@@ -24,7 +24,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Cormorant Garamond', serif;
-  background: var(--bg);
+  background: linear-gradient(160deg, #7a1530 0%, #a0203a 50%, #7a1530 100%);
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
