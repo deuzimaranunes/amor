@@ -1,151 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nosso App ❤️</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>❤️ Feliz Dia dos Namorados ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2d0000">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div id="hearts"></div>
+  <!-- Fundo animado: corações subindo -->
+  <div class="hearts-bg" aria-hidden="true" id="heartsBg"></div>
 
-<header class="hero">
+  <!-- ── HOME ───────────────────────────────────── -->
+  <section class="section home" id="home">
 
-    <div class="hero-content">
+    <nav class="nav">
+      <a href="#home">Início</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#mensagem">Mensagem</a>
+    </nav>
 
-        <div class="hero-text">
+    <div class="home-content">
 
-            <span class="tag">
-                Nossa História
-            </span>
+      <p class="eyebrow">12 · 06 · 2026 — Dia dos Namorados</p>
 
-            <h1>
-                Feliz Dia dos Namorados
-            </h1>
+      <h1>Para o amor<br><em>da minha vida</em></h1>
 
-            <p>
-                Alguns momentos merecem ser guardados para sempre.
-            </p>
+      <!-- Foto média (não hero full-screen) -->
+      <div class="foto-wrapper">
+        <img src="casal.jpg" alt="Nós dois" class="foto-principal">
+        <div class="foto-frame"></div>
+      </div>
 
-            <button>
-                Ver Nossa História
-            </button>
+      <!-- Contador -->
+      <div class="contador-bloco">
+        <span class="contador-label">juntos há</span>
+        <span class="contador-numero" id="tempo">—</span>
+        <span class="contador-label">dias</span>
+      </div>
 
+      <!-- Frase curta -->
+      <p class="frase-curta">"Você é o meu lugar favorito no mundo."</p>
+
+      <!-- Cards de motivos -->
+      <div class="cards-grid">
+        <div class="card">
+          <span class="card-icon">🌙</span>
+          <p>Seu sorriso ilumina até os dias cinzas</p>
         </div>
-
-        <div class="hero-image">
-
-            <img src="casal.jpg">
-
+        <div class="card">
+          <span class="card-icon">🌹</span>
+          <p>Seu abraço é onde me sinto em casa</p>
         </div>
-
-    </div>
-
-</header>
-
-<section class="stats">
-
-    <div class="card-stat">
-
-        <h2 id="dias">0</h2>
-
-        <span>Dias Juntos</span>
-
-    </div>
-
-    <div class="card-stat">
-
-        <h2>∞</h2>
-
-        <span>Momentos</span>
-
-    </div>
-
-    <div class="card-stat">
-
-        <h2>❤️</h2>
-
-        <span>Nossa História</span>
-
-    </div>
-
-</section>
-
-<section class="gallery">
-
-    <h2>Nossos Momentos</h2>
-
-    <div class="gallery-grid">
-
-        <img src="foto1.jpg">
-        <img src="foto2.jpg">
-        <img src="foto3.jpg">
-        <img src="foto4.jpg">
-        <img src="foto5.jpg">
-        <img src="foto6.jpg">
-
-    </div>
-
-</section>
-
-<section class="timeline">
-
-    <h2>Nossa Linha do Tempo</h2>
-
-    <div class="timeline-item">
-
-        <img src="foto1.jpg">
-
-        <div class="timeline-text">
-
-            <h3>Primeiro Encontro</h3>
-
-            <p>O começo de tudo.</p>
-
+        <div class="card">
+          <span class="card-icon">✨</span>
+          <p>Você transforma tudo em algo especial</p>
         </div>
-
-    </div>
-
-    <div class="timeline-item reverse">
-
-        <img src="foto2.jpg">
-
-        <div class="timeline-text">
-
-            <h3>Momentos Inesquecíveis</h3>
-
-            <p>Cada lembrança vale a pena.</p>
-
+        <div class="card">
+          <span class="card-icon">🎶</span>
+          <p>Cada memória nossa é minha favorita</p>
         </div>
+      </div>
+
+      <!-- Botão descobrir motivo -->
+      <div class="motivos-wrapper">
+        <button class="btn-motivo" onclick="mostrarMotivo()">Descobrir ❤️</button>
+        <p class="motivo-texto" id="motivo"></p>
+      </div>
 
     </div>
+  </section>
 
-</section>
-
-<section class="final-message">
-
-    <div class="message-card">
-
-        <h2>❤️</h2>
-
-        <p>
-            Obrigado por fazer parte da minha vida.
-        </p>
-
+  <!-- ── GALERIA 3×3 ─────────────────────────────── -->
+  <section class="section galeria" id="galeria">
+    <div class="section-header">
+      <span class="eyebrow">Memórias</span>
+      <h2>Nossa Galeria</h2>
     </div>
 
-</section>
+    <div class="grid-galeria">
+      <div class="grid-item" onclick="abrirFoto(this)"><img src="foto1.jpg" alt="Memória 1"><div class="overlay">&#43;</div></div>
+      <div class="grid-item" onclick="abrirFoto(this)"><img src="foto2.jpg" alt="Memória 2"><div class="overlay">&#43;</div></div>
+      <div class="grid-item" onclick="abrirFoto(this)"><img src="foto3.jpg" alt="Memória 3"><div class="overlay">&#43;</div></div>
+      <div class="grid-item" onclick="abrirFoto(this)"><img src="foto4.jpg" alt="Memória 4"><div class="overlay">&#43;</div></div>
+      <div class="grid-item" onclick="abrirFoto(this)"><img src="foto5.jpg" alt="Memória 5"><div class="overlay">&#43;</div></div>
+      <div class="grid-item" onclick="abrirFoto(this)"><img src="foto6.jpg" alt="Memória 6"><div class="overlay">&#43;</div></div>
+      <div class="grid-item" onclick="abrirFoto(this)"><img src="foto7.jpg" alt="Memória 7"><div class="overlay">&#43;</div></div>
+      <div class="grid-item" onclick="abrirFoto(this)"><img src="foto8.jpg" alt="Memória 8"><div class="overlay">&#43;</div></div>
+      <div class="grid-item" onclick="abrirFoto(this)"><img src="foto9.jpg" alt="Memória 9"><div class="overlay">&#43;</div></div>
+    </div>
 
-<script src="script.js"></script>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="fecharFoto()">
+      <img id="lightbox-img" src="" alt="">
+      <button class="lightbox-close" onclick="fecharFoto()">✕</button>
+    </div>
+  </section>
 
+  <!-- ── TIMELINE ────────────────────────────────── -->
+  <section class="section timeline" id="timeline">
+    <div class="section-header">
+      <span class="eyebrow">Nossa história</span>
+      <h2>Timeline</h2>
+    </div>
+
+    <div class="timeline-lista">
+
+      <div class="timeline-item">
+        <div class="timeline-foto">
+          <img src="tl1.jpg" alt="Momento 1">
+        </div>
+        <div class="timeline-linha">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-texto">
+          <span class="tl-data">Janeiro 2026</span>
+          <p>O início de tudo — o dia em que tudo mudou.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reverse">
+        <div class="timeline-foto">
+          <img src="tl2.jpg" alt="Momento 2">
+        </div>
+        <div class="timeline-linha">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-texto">
+          <span class="tl-data">Março 2026</span>
+          <p>Cada passeio, cada risada — memórias que guardo.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-foto">
+          <img src="tl3.jpg" alt="Momento 3">
+        </div>
+        <div class="timeline-linha">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-texto">
+          <span class="tl-data">Junho 2026</span>
+          <p>Hoje — feliz por estar ao seu lado.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── MENSAGEM ────────────────────────────────── -->
+  <section class="section mensagem" id="mensagem">
+    <div class="mensagem-inner">
+      <span class="eyebrow">Com todo o meu amor</span>
+      <h2>Minha Declaração</h2>
+      <div class="divider-heart">❤</div>
+      <p>Desde que você entrou na minha vida, tudo ficou mais bonito. Seu sorriso ilumina meus dias, seu carinho aquece meu coração e sua companhia torna qualquer momento especial.</p>
+      <p>Obrigado por cada lembrança construída juntos. Que nossa história continue sendo escrita com muito amor.</p>
+      <h3>❤️ Eu Te Amo ❤️</h3>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
