@@ -57,24 +57,23 @@ function criarCoracoes() {
   const container = document.getElementById("heartsBg");
   if (!container) return;
 
-  const total = 22;
+  const total = 25;
   for (let i = 0; i < total; i++) {
     const hrt = document.createElement("span");
     hrt.className = "hrt";
     hrt.textContent = "♥";
 
     const left  = Math.random() * 100;
-    const delay = Math.random() * 18;
-    const dur   = 14 + Math.random() * 12;
-    const size  = 1.4 + Math.random() * 2.2;
+    const delay = Math.random() * 15;
+    const dur   = 12 + Math.random() * 10;
+    const size  = 1.6 + Math.random() * 2.4;
 
-    hrt.style.cssText = `
-      left: ${left}%;
-      animation-delay: ${delay}s;
-      animation-duration: ${dur}s;
-      font-size: ${size}rem;
-      opacity: 0;
-    `;
+    // NÃO setar opacity aqui — a animação CSS controla
+    hrt.style.left = left + "%";
+    hrt.style.animationDelay = delay + "s";
+    hrt.style.animationDuration = dur + "s";
+    hrt.style.fontSize = size + "rem";
+
     container.appendChild(hrt);
   }
 }
