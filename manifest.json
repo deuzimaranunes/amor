@@ -3,11 +3,15 @@
   "short_name": "Amor",
   "description": "Uma declaração de amor especial para o Dia dos Namorados ❤️",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
   "orientation": "portrait",
   "theme_color": "#c0001a",
   "background_color": "#c0001a",
   "id": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
   "prefer_related_applications": false,
   "categories": ["lifestyle", "social"],
   "icons": [
@@ -42,6 +46,13 @@
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "narrow",
+      "label": "Página inicial"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
       "label": "Página inicial"
     }
   ]
