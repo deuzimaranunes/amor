@@ -1,20 +1,33 @@
 {
   "name": "Meu Amor",
   "short_name": "Amor",
+  "description": "Uma declaração de amor especial para o Dia dos Namorados ❤️",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#8b0000",
-  "background_color": "#8b0000",
+  "orientation": "portrait",
+  "theme_color": "#c0001a",
+  "background_color": "#c0001a",
+  "id": "/amor/",
   "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "casal.jpg",
+      "sizes": "640x480",
+      "type": "image/jpeg",
+      "label": "Página inicial"
     }
   ]
 }
